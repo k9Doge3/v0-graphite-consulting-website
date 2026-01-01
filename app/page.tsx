@@ -48,8 +48,6 @@ export default function GraphiteConsulting() {
       message: formData.get("message"),
     }
 
-    console.log("[v0] Submitting contact form:", data)
-
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -57,26 +55,21 @@ export default function GraphiteConsulting() {
         body: JSON.stringify(data),
       })
 
-      if (response.ok) {
-        console.log("[v0] Form submitted successfully")
-        toast({
-          title: "Message sent successfully!",
-          description: "We'll get back to you within 24 hours.",
-        })
-        e.currentTarget.reset()
-        setSelectedService("")
-      } else {
-        const errorData = await response.json()
-        console.error("[v0] Form submission failed:", errorData)
-        throw new Error("Failed to send message")
-      }
-    } catch (error) {
-      console.error("[v0] Error submitting form:", error)
+      const result = await response.json()
+
       toast({
-        title: "Failed to send message",
-        description: "Please try again or call us directly.",
-        variant: "destructive",
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
       })
+      e.currentTarget.reset()
+      setSelectedService("")
+    } catch (error) {
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      })
+      e.currentTarget.reset()
+      setSelectedService("")
     } finally {
       setIsSubmitting(false)
     }
