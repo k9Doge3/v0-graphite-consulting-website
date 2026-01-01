@@ -34,22 +34,22 @@ A professional, modern website for Graphite Consulting - a renovation and plumbi
 
 Add these to your `.env.local` file (optional - defaults are provided):
 
-```
+\`\`\`
 SMTP_EMAIL=ky.group.solutions@gmail.com
 SMTP_PASSWORD=auvl zyme mgym kwnc
-```
+\`\`\`
 
 ## Getting Started
 
 1. **Install dependencies**:
-   ```bash
+   \`\`\`bash
    npm install
-   ```
+   \`\`\`
 
 2. **Run the development server**:
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 3. **Open your browser**:
    Navigate to [http://localhost:3000](http://localhost:3000)

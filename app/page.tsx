@@ -95,31 +95,31 @@ export default function GraphiteConsulting() {
             <div className="hidden md:flex items-center gap-6">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-sm font-medium hover:text-accent-orange transition-colors"
+                className="font-bold hover:text-accent-orange transition-colors mx-0 my-0 px-0 text-lg text-chart-1"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-sm font-medium hover:text-accent-orange transition-colors"
+                className="font-bold hover:text-accent-orange transition-colors text-chart-1 text-lg"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-sm font-medium hover:text-accent-orange transition-colors"
+                className="font-bold hover:text-accent-orange transition-colors text-chart-1 text-lg"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-sm font-medium hover:text-accent-orange transition-colors"
+                className="font-bold hover:text-accent-orange transition-colors text-chart-1 text-lg"
               >
                 Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-sm font-medium hover:text-accent-orange transition-colors"
+                className="font-bold hover:text-accent-orange transition-colors text-chart-1 text-lg"
               >
                 Contact
               </button>
@@ -142,31 +142,31 @@ export default function GraphiteConsulting() {
             <div className="md:hidden py-4 bg-background border-t border-border">
               <button
                 onClick={() => scrollToSection("home")}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-accent-orange transition-colors"
+                className="block w-full text-left py-2 text-sm font-bold hover:text-accent-orange transition-colors"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-accent-orange transition-colors"
+                className="block w-full text-left py-2 text-sm font-bold hover:text-accent-orange transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-accent-orange transition-colors"
+                className="block w-full text-left py-2 text-sm font-bold hover:text-accent-orange transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-accent-orange transition-colors"
+                className="block w-full text-left py-2 text-sm font-bold hover:text-accent-orange transition-colors"
               >
                 Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-accent-orange transition-colors"
+                className="block w-full text-left py-2 text-sm font-bold hover:text-accent-orange transition-colors"
               >
                 Contact
               </button>
@@ -176,9 +176,13 @@ export default function GraphiteConsulting() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img src="/construction-worker-in-hard-hat-at-modern-construc.jpg" alt="Construction site" className="w-full h-full object-cover" />
+          <img
+            src="/construction-worker-in-hard-hat-at-modern-construc.jpg"
+            alt="Construction site"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </div>
 
@@ -193,15 +197,14 @@ export default function GraphiteConsulting() {
             <Button
               onClick={() => scrollToSection("contact")}
               size="lg"
-              className="bg-accent-orange hover:bg-accent-orange/90 text-white text-lg px-8"
+              className="bg-accent-orange hover:bg-accent-orange/90 text-white font-semibold px-8"
             >
               Get Free Quote
             </Button>
             <Button
               onClick={() => scrollToSection("services")}
               size="lg"
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-foreground text-lg px-8"
+              className="bg-accent-orange hover:bg-accent-orange/90 text-white font-semibold px-8"
             >
               Our Services
             </Button>
@@ -686,7 +689,7 @@ export default function GraphiteConsulting() {
                   className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center hover:bg-accent-orange hover:text-white transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
               </div>
