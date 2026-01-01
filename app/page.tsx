@@ -16,6 +16,7 @@ export default function GraphiteConsulting() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [selectedService, setSelectedService] = useState("")
   const { toast } = useToast()
 
   useEffect(() => {
@@ -43,9 +44,11 @@ export default function GraphiteConsulting() {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
-      service: formData.get("service"),
+      service: selectedService,
       message: formData.get("message"),
     }
+
+    console.log("[v0] Submitting contact form:", data)
 
     try {
       const response = await fetch("/api/contact", {
@@ -55,15 +58,20 @@ export default function GraphiteConsulting() {
       })
 
       if (response.ok) {
+        console.log("[v0] Form submitted successfully")
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you within 24 hours.",
         })
         e.currentTarget.reset()
+        setSelectedService("")
       } else {
+        const errorData = await response.json()
+        console.error("[v0] Form submission failed:", errorData)
         throw new Error("Failed to send message")
       }
     } catch (error) {
+      console.error("[v0] Error submitting form:", error)
       toast({
         title: "Failed to send message",
         description: "Please try again or call us directly.",
@@ -587,7 +595,7 @@ export default function GraphiteConsulting() {
 
                     <div>
                       <Label htmlFor="service">Service Type *</Label>
-                      <Select name="service" required>
+                      <Select name="service" required value={selectedService} onValueChange={setSelectedService}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
@@ -689,7 +697,7 @@ export default function GraphiteConsulting() {
                   className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center hover:bg-accent-orange hover:text-white transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
               </div>

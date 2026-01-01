@@ -5,19 +5,23 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, service, message } = await request.json()
 
+    console.log("[v0] Contact form submission received:", { name, email, phone, service, message })
+
     // Validate inputs
     if (!name || !email || !phone || !service || !message) {
+      console.log("[v0] Validation failed - missing fields")
       return NextResponse.json({ error: "All fields are required" }, { status: 400 })
     }
 
-    // Create transporter using SMTP credentials
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.SMTP_EMAIL || "ky.group.solutions@gmail.com",
-        pass: process.env.SMTP_PASSWORD || "auvl zyme mgym kwnc",
+        pass: process.env.SMTP_PASSWORD || "auvlzymemgymkwnc",
       },
     })
+
+    console.log("[v0] Transporter created, attempting to send emails...")
 
     // Email to business owner
     const ownerMailOptions = {
@@ -104,11 +108,14 @@ export async function POST(request: Request) {
 
     // Send both emails
     await transporter.sendMail(ownerMailOptions)
+    console.log("[v0] Owner notification email sent successfully")
+
     await transporter.sendMail(customerMailOptions)
+    console.log("[v0] Customer auto-reply email sent successfully")
 
     return NextResponse.json({ success: true }, { status: 200 })
   } catch (error) {
-    console.error("Error sending email:", error)
+    console.error("[v0] Error sending email:", error)
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
   }
 }
