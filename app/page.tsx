@@ -87,10 +87,8 @@ export default function GraphiteConsulting() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 sm:h-20">
             <div className="flex items-center gap-2 min-w-0">
-              <div className="w-10 h-10 bg-accent-orange rounded flex items-center justify-center flex-shrink-0">
-                <Wrench className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-lg sm:text-2xl font-bold text-foreground truncate">Graphite</span>
+              
+              <span className="text-lg sm:text-2xl font-bold text-foreground truncate">Graphite  Consulting  </span>
             </div>
 
             {/* Desktop Menu */}
@@ -244,9 +242,7 @@ export default function GraphiteConsulting() {
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto">
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                <div className="w-16 h-16 bg-accent-orange/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-orange/20 transition-colors">
-                  <Wrench className="w-8 h-8 text-accent-orange" />
-                </div>
+                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Renovation Services</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Transform your residential or commercial space with our expert renovation services. From kitchen and
@@ -272,9 +268,7 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                <div className="w-16 h-16 bg-accent-orange/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-orange/20 transition-colors">
-                  <Camera className="w-8 h-8 text-accent-orange" />
-                </div>
+                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Drain Inspections</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   State-of-the-art camera inspection technology to diagnose drain and sewer line issues quickly and
@@ -299,9 +293,7 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                <div className="w-16 h-16 bg-accent-orange/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-orange/20 transition-colors">
-                  <Hammer className="w-8 h-8 text-accent-orange" />
-                </div>
+                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Deck Construction</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Create the perfect outdoor living space with our custom deck construction services. From design to
@@ -326,9 +318,7 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                <div className="w-16 h-16 bg-accent-orange/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-orange/20 transition-colors">
-                  <Droplet className="w-8 h-8 text-accent-orange" />
-                </div>
+                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Plumbing Services</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Complete residential and commercial plumbing solutions. From routine repairs to complex installations,
