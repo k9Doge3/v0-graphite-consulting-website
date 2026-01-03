@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, Mail, MapPin, Wrench, Camera, Hammer, Droplet, ChevronDown, Menu, X, Check } from "lucide-react"
+import { Phone, Mail, MapPin, Wrench, ChevronDown, Menu, X, Check } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 export default function GraphiteConsulting() {
@@ -53,7 +53,7 @@ export default function GraphiteConsulting() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.JSON.stringify(data),
+        body: JSON.stringify(data),
       })
 
       const result = await response.json()
@@ -87,8 +87,7 @@ export default function GraphiteConsulting() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 sm:h-20">
             <div className="flex items-center gap-2 min-w-0">
-              
-              <span className="text-lg sm:text-2xl font-bold text-foreground truncate">Graphite  Consulting  </span>
+              <span className="text-lg sm:text-2xl font-bold text-foreground truncate">Graphite Consulting</span>
             </div>
 
             {/* Desktop Menu */}
@@ -180,7 +179,7 @@ export default function GraphiteConsulting() {
             playsInline
             preload="auto"
             onCanPlay={() => setVideoLoaded(true)}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-fill"
           >
             <source
               src="https://rpockdpjwjy9bsjo.public.blob.vercel-storage.com/Gen-4_5%20Macro%20cinematic%20shot%20of%20a%20holographic%20wireframe%20scan%20emanating%20from%20a%20inspection%20camera%20head%2C%20revealing%20a%20hairline%20crack%20in%20a%20giant%2C%20damp%20concrete%20sewer%20pipe%20Cyberpunk%20blue%20light%2C%20photorealis%20.mp4"
@@ -242,7 +241,6 @@ export default function GraphiteConsulting() {
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto">
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Renovation Services</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Transform your residential or commercial space with our expert renovation services. From kitchen and
@@ -268,7 +266,6 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Drain Inspections</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   State-of-the-art camera inspection technology to diagnose drain and sewer line issues quickly and
@@ -293,7 +290,6 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Deck Construction</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Create the perfect outdoor living space with our custom deck construction services. From design to
@@ -318,7 +314,6 @@ export default function GraphiteConsulting() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-accent-orange">
               <CardContent className="p-6 sm:p-8">
-                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Plumbing Services</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                   Complete residential and commercial plumbing solutions. From routine repairs to complex installations,
