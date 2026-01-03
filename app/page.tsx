@@ -179,11 +179,12 @@ export default function GraphiteConsulting() {
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/construction-worker-in-hard-hat-at-modern-construc.jpg"
-            alt="Construction site"
-            className="w-full h-full object-cover"
-          />
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+            <source
+              src="https://rpockdpjwjy9bsjo.public.blob.vercel-storage.com/Gen-4_5%20Macro%20cinematic%20shot%20of%20a%20holographic%20wireframe%20scan%20emanating%20from%20a%20inspection%20camera%20head%2C%20revealing%20a%20hairline%20crack%20in%20a%20giant%2C%20damp%20concrete%20sewer%20pipe%20Cyberpunk%20blue%20light%2C%20photorealis%20.mp4"
+              type="video/mp4"
+            />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </div>
 
